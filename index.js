@@ -9,7 +9,7 @@ let h1 = document.querySelector("h1");
 let h2 = document.querySelector("h2");
 let bar1 = document.querySelector("#e1");
 let bar2 = document.querySelector("#e2");
-let nome1 = "Natacha Azevedo";
+let nome1 = "Natacha Azevedo";
 let nome2 = "Criatividade & Funcionalidade";
 let timeLetras1 = 100;
 let timeBar = 300;
@@ -26,11 +26,9 @@ let interval1 = setInterval(() => {
   span.style.color = colors[countLetras1 % colors.length];
   palavra.appendChild(span);
 
-  if (
-    countLetras1 < nome1.length - 1 &&
-    letraAtual !== " " &&
-    nome1[countLetras1 + 1] !== " "
-  ) {
+  if (letraAtual === " ") { // Se letra atual for espaço em branco
+    palavra.appendChild(document.createTextNode(" ")); // Adiciona um espaço em branco
+  } else if (nome1[countLetras1 + 1] !== " ") { // Se a próxima letra não for espaço em branco
     setTimeout(() => {
       span.style.color = "#ded9e4";
     }, timeLetras1);
@@ -51,6 +49,8 @@ let interval1 = setInterval(() => {
     segundoTexto();
   }
 }, timeLetras1);
+
+
 
 function segundoTexto() {
   bar2.style.opacity = "1";
