@@ -3,7 +3,7 @@ let h2 = document.querySelector("h2");
 let bar1 = document.querySelector("#e1");
 let bar2 = document.querySelector("#e2");
 let nome1 = "Natacha Azevedo";
-let nome2 = "Criatividade & Funcionalidade...";
+let nome2 = "Criatividade & Funcionalidade";
 let timeLetras1 = 100;
 
 let timeBar = 300;
@@ -42,27 +42,7 @@ function segundoTexto() {
   }, timeLetras1);
 }
 
-// document.addEventListener("scroll", function() {
-//     var pageTop = window.pageYOffset || document.documentElement.scrollTop;
-//     var pageBottom = pageTop + window.innerHeight;
-//     var tags = document.querySelectorAll(".tag");
-
-//     for (var i = 0; i < tags.length; i++) {
-//       var tag = tags[i];
-
-//       if (tag.getBoundingClientRect().top < pageBottom) {
-//         tag.classList.add("visible");
-//       } else {
-//         tag.classList.remove("visible");
-//       }
-//     }
-
-//     if(scrollY < 100)   {
-//         tags[0].classList.remove("visible")
-
-//     }
-//   });
-
+// Animação de scroll
 document.addEventListener("scroll", function () {
   var ids = ["about", "projects"];
   var elements = new Array();
