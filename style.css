@@ -341,7 +341,7 @@ figure:hover .linguagens {
 
 @media (max-width: 768px) {
   .digna h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   .digna h2 {
@@ -396,17 +396,32 @@ figure:hover .linguagens {
     position: unset;
   }
 }
+
 @keyframes jump {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
+
 .letter {
   display: inline-block;
   animation: jump 0.5s ease-in-out alternate;
 }
-@keyframes fade-in {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

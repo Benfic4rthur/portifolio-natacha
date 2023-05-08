@@ -20,30 +20,29 @@ h1.appendChild(palavra);
 
 let interval1 = setInterval(() => {
   let letraAtual = nome1[countLetras1];
-  if (letraAtual === " " && nome1[countLetras1 - 1] !== " ") {
-    palavra = document.createElement("span");
-    palavra.classList.add("word");
-    h1.appendChild(palavra);
-  }
   let span = document.createElement("span");
   span.textContent = letraAtual;
   span.classList.add("letter");
   span.style.color = colors[countLetras1 % colors.length];
   palavra.appendChild(span);
-  
-  if (countLetras1 < nome1.length - 1 && letraAtual !== " " && nome1[countLetras1 + 1] !== " ") {
+
+  if (
+    countLetras1 < nome1.length - 1 &&
+    letraAtual !== " " &&
+    nome1[countLetras1 + 1] !== " "
+  ) {
     setTimeout(() => {
       span.style.color = "#ded9e4";
     }, timeLetras1);
   }
-  
+
   countLetras1++;
-  
+
   if (countLetras1 == nome1.length) {
     bar1.style.display = "none";
     setTimeout(() => {
-      h1.childNodes.forEach(word => {
-        word.childNodes.forEach(span => {
+      h1.childNodes.forEach((word) => {
+        word.childNodes.forEach((span) => {
           span.style.color = "#ded9e4";
         });
       });
@@ -52,7 +51,6 @@ let interval1 = setInterval(() => {
     segundoTexto();
   }
 }, timeLetras1);
-
 
 function segundoTexto() {
   bar2.style.opacity = "1";
@@ -82,9 +80,6 @@ for (let i = 0; i < letters.length; i++) {
   letter.style.animationDelay = delay + "ms";
   letter.classList.add(className);
 }
-
-
-
 
 // Animação de scroll
 document.addEventListener("scroll", function () {
