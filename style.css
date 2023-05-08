@@ -67,6 +67,7 @@ nav i:hover {
   padding-top: 10rem;
   text-align: center;
   font-weight: 100;
+  cursor: default;
 }
 
 .digna h1 {
@@ -89,6 +90,7 @@ nav i:hover {
   color: var(--cor1);
 
 }
+
 
 #e1 {
   font-size: 9em;
@@ -122,7 +124,7 @@ nav i:hover {
 }
 
 /* SOBRE MIM */
-.eu {
+.about-me {
   width: 71.5%;
   text-align: justify;
   color: var(--cor1);
@@ -266,7 +268,7 @@ figure:hover .linguagens {
   display: grid;
   place-content: center;
   position: fixed;
-  bottom: 1rem;
+  bottom: 0.5rem;
   right: 0.5rem;
   width: 9.2rem;
   height: 45px;
@@ -313,7 +315,7 @@ figure:hover .linguagens {
 
   }
 
-  .eu {
+  .about-me {
     width: 90%;
   }
 
@@ -360,11 +362,11 @@ figure:hover .linguagens {
     padding: 0;
   }
 
-  .eu h2 {
+  .about-me h2 {
     font-size: 2rem;
   }
 
-  .eu p {
+  .about-me p {
     font-size: 1.2rem;
   }
 
@@ -394,3 +396,17 @@ figure:hover .linguagens {
     position: unset;
   }
 }
+@keyframes jump {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+.letter {
+  display: inline-block;
+  animation: jump 0.5s ease-in-out alternate;
+}
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
