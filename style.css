@@ -263,7 +263,7 @@ figure:hover .linguagens {
   place-content: center;
   position: fixed;
   bottom: 1rem;
-  left: 0rem;
+  right: 0.5rem;
   width: 9.2rem;
   height: 45px;
   font-size: 20px;
