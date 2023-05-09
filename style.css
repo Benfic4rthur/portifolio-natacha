@@ -278,14 +278,38 @@ figure:hover .linguagens {
   text-align: center;
   background-color: white;
   box-shadow: 2px 2px 5px rgba(79, 79, 79, 0.5);
+  transition: all 0.7s;
+  visibility: hidden;
+  transition: 0.7s;
+
 }
-.contato:hover{
+
+.contato:hover {
   background-color: rgb(255, 255, 255);
   box-shadow: 2px 2px 5px rgba(79, 79, 79, 0.5);
-  transform: scale(1.3);
-  right: 1.5rem;
+  transform: scale(1.2);
+  right: 1.3rem;
   transition: all 0.5s;
 }
+
+#contact.show {
+  animation-name: aparecer;
+  animation-duration: 7s;
+  animation-fill-mode: forwards;
+  visibility: visible;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
 .email {
   text-decoration: none;
   color: rgb(30, 3, 44);
@@ -298,6 +322,7 @@ figure:hover .linguagens {
 .estrela {
   animation: balancinho .75s alternate infinite;
 }
+
 
 @keyframes balancinho {
   0% {
@@ -426,10 +451,12 @@ figure:hover .linguagens {
     position: unset;
   }
 }
+
 @media (max-width: 575.98px) {
   .digna h1 {
     font-size: 2.4rem;
   }
+
   .digna h2 {
     font-size: 1.2rem;
     margin-left: 0;
@@ -464,6 +491,7 @@ figure:hover .linguagens {
     opacity: 1;
   }
 }
+
 .word {
   text-shadow: 4px 4px 0px #000, 6px 6px 0px #333;
 }
