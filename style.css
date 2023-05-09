@@ -458,3 +458,6 @@ figure:hover .linguagens {
     opacity: 1;
   }
 }
+.word {
+  text-shadow: 4px 4px 0px #000, 6px 6px 0px #333;
+}
