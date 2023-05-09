@@ -46,7 +46,7 @@ nav {
 }
 
 nav i {
-  color: var(--cor1)
+  color: var(--cor1);
 }
 
 nav i:hover {
@@ -277,7 +277,6 @@ figure:hover .linguagens {
   border-radius: 30px;
   text-align: center;
   background-color: white;
-
   box-shadow: 2px 2px 5px rgba(79, 79, 79, 0.5);
 }
 
@@ -290,11 +289,34 @@ figure:hover .linguagens {
   display: inline-block;
 }
 
-.coracao {
-  animation: batida .75s alternate infinite;
+.estrela {
+  animation: balancinho .75s alternate infinite;
 }
 
-@keyframes batida {
+@keyframes balancinho {
+  0% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+/*
+@keyframes pulsar {
   0% {
     transform: scale(1)
   }
@@ -307,6 +329,8 @@ figure:hover .linguagens {
     transform: scale(.9)
   }
 }
+*/
+
 
 @media (max-width: 1024px) {
   nav {
