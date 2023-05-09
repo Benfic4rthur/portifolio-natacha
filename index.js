@@ -52,34 +52,53 @@ let interval1 = setInterval(() => {
 
 
 
-function segundoTexto() {
-  bar2.style.opacity = "1";
-  let interval2 = setInterval(() => {
-    h2.textContent += nome2[countLetras2];
-    countLetras2++;
-    if (countLetras2 == nome2.length) {
-      clearInterval(interval2);
-      setInterval(() => {
-        if (countBar2 % 2 == 0) {
-          bar2.style.opacity = "0";
-        } else {
-          bar2.style.opacity = "1";
-        }
-        countBar2++;
-      }, timeBar);
+function shuffleString(str) {
+  let arr = str.split("");
+  for (let i = arr.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr.join("");
+}
+
+function segundoTexto() { // Animação do segundo texto
+  bar2.style.opacity = "1"; // Mostra a barra
+  let originalOrder = nome2.split(""); // Separa o nome em letras
+  let shuffledName = shuffleString(nome2); // Embaralha as letras
+  let remainingLetters = shuffledName.split(""); // Separa as letras embaralhadas
+  let interval2 = setInterval(() => { // Intervalo de tempo para mostrar as letras
+    let nextLetter = remainingLetters.shift(); // Pega a próxima letra
+    if (nextLetter !== undefined) { // Se a próxima letra não for indefinida
+      h2.textContent += nextLetter; // Adiciona a letra ao texto
+      countLetras2++; // Conta a letra
     }
-  }, timeLetras1);
+    if (countLetras2 == nome2.length){  // Se a contagem de letras for igual ao tamanho do nome
+      clearInterval(interval2); // Para o intervalo
+      let restoreInterval = setInterval(() => { // Intervalo de tempo para restaurar a ordem original
+        let nextLetter = originalOrder.shift(); // Pega a próxima letra
+        if (nextLetter !== undefined) { // Se a próxima letra não for indefinida
+          h2.textContent = h2.textContent.slice(0, countLetras2 - 1) + nextLetter + h2.textContent.slice(countLetras2); // Substitui a letra
+          countLetras2--; // Conta a letra
+        } 
+        if (countLetras2 == 0) { // Se a contagem de letras for igual a zero
+          clearInterval(restoreInterval); // Para o intervalo
+          h2.textContent = h2.textContent.split("").reverse().join(""); // Inverte o texto
+          setInterval(() => { // Intervalo de tempo para piscar a barra
+            if (countBar2 % 2 == 0) { // Se a contagem da barra for par
+              bar2.style.opacity = "0"; // Esconde a barra
+            } else { // Se a contagem da barra for ímpar
+              bar2.style.opacity = "1"; // Mostra a barra
+            } 
+            countBar2++; // Conta a barra
+          }, timeBar); // Tempo da barra
+        }
+      }, timeLetras1); // Tempo das letras
+    }
+  }, timeLetras1); // Tempo das letras
 }
 
-let letters = document.querySelectorAll("h1 span");
 
-for (let i = 0; i < letters.length; i++) {
-  let letter = letters[i];
-  let className = "color-" + i;
-  let delay = i * 50;
-  letter.style.animationDelay = delay + "ms";
-  letter.classList.add(className);
-}
+
 
 // Animação de scroll
 document.addEventListener("scroll", function () {
