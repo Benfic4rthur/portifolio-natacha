@@ -12,6 +12,7 @@ let bar2 = document.querySelector("#e2");
 let nome1 = "Natacha Azevedo";
 let nome2 = "Criatividade & Funcionalidade";
 let timeLetras1 = 100;
+let timeLetras2 = 75;
 let timeBar = 300;
 
 let palavra = document.createElement("span");
@@ -92,7 +93,7 @@ function segundoTexto() { // Animação do segundo texto
             countBar2++; // Conta a barra
           }, timeBar); // Tempo da barra
         }
-      }, timeLetras1); // Tempo das letras
+      }, timeLetras2); // Tempo das letras
     }
   }, timeLetras1); // Tempo das letras
 }
