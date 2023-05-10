@@ -139,5 +139,6 @@ document.addEventListener("scroll", function () {
 
 // Animação de contato
 setTimeout(function () {
-  document.getElementById("contact").classList.add("show");
+  // Tempo de animação
+  document.getElementById("contact").classList.add("show"); // Mostra o contato
 }, 7000);
