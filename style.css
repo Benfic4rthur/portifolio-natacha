@@ -203,7 +203,8 @@ nav i:hover {
 
 .descricao {
   font-weight: 200;
-  padding: 0 10% 1rem
+  padding: 0 10% 1rem;
+  text-align: justify;
 }
 
 figure {
