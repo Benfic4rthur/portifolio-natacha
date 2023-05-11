@@ -47,11 +47,14 @@ nav {
 
 nav i {
   color: var(--cor1);
+  transform: rotateY(0deg);
+  transition: all 0.7s;
+  filter: drop-shadow(1px 2px 10px rgb(80, 73, 84));
 }
 
 nav i:hover {
   filter: drop-shadow(1px 2px 10px white);
-  transform: rotateY(360deg);
+  transform: rotateY(180deg);
   transition: all 0.7s;
 }
 
