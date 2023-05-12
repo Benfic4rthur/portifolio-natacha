@@ -117,7 +117,7 @@ nav i:hover {
 .tag {
   opacity: 0;
   transform: translate(0, 50vh);
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 .tag.visible {
@@ -227,7 +227,7 @@ figcaption {
   margin-top: 1rem;
 }
 
-.linguagens {
+.artes {
   opacity: 0;
   width: 100%;
   height: 100%;
@@ -240,14 +240,14 @@ figcaption {
   transition: all .3s ease-in-out;
 }
 
-figure:hover .linguagens {
+figure:hover .artes {
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
 
-.linguagens ul {
+.artes ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -256,14 +256,14 @@ figure:hover .linguagens {
   justify-content: center;
 }
 
-.linguagens p {
+.artes p {
   color: white;
   font-weight: 700;
   font-size: 20px;
   text-shadow: 1px 2px 20px white;
 }
 
-.linguagens ul li {
+.artes ul li {
   padding: 10px 20px;
   background-color: rgb(26, 18, 30);
   border: dashed 2px #fff;
