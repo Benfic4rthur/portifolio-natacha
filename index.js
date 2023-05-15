@@ -9,18 +9,21 @@ let h1 = document.querySelector("h1");
 let h2 = document.querySelector("h2");
 let bar1 = document.querySelector("#e1");
 let bar2 = document.querySelector("#e2");
-let nome1 = "Natacha Azevedo";
+let nome1 = "Natacha-Azevedo";
 let nome2 = "Criatividade & Funcionalidade";
 let timeLetras1 = 100;
 let timeLetras2 = 75;
 let timeBar = 300;
 
-let palavra = document.createElement("span");
-palavra.classList.add("word");
-h1.appendChild(palavra);
+let palavra = document.createElement("span"); // Cria um elemento
+palavra.classList.add("word"); // Adiciona a classe
+h1.appendChild(palavra); // Adiciona o elemento
 
 let interval1 = setInterval(() => {
   let letraAtual = nome1[countLetras1];
+  if (letraAtual === "-") {
+    letraAtual = " "; // Substitui o "-" por um espaço em branco
+  }
   let span = document.createElement("span");
   span.textContent = letraAtual;
   span.classList.add("letter");
@@ -28,10 +31,8 @@ let interval1 = setInterval(() => {
   palavra.appendChild(span);
 
   if (letraAtual === " ") {
-    // Se letra atual for espaço em branco
-    palavra.appendChild(document.createTextNode(" ")); // Adiciona um espaço em branco
+    palavra.appendChild(document.createTextNode(" "));
   } else if (nome1[countLetras1 + 1] !== " ") {
-    // Se a próxima letra não for espaço em branco
     setTimeout(() => {
       span.style.color = "#ded9e4";
     }, timeLetras1);
@@ -52,6 +53,7 @@ let interval1 = setInterval(() => {
     segundoTexto();
   }
 }, timeLetras1);
+
 
 function shuffleString(str) {
   let arr = str.split("");

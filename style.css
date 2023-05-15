@@ -65,7 +65,7 @@ nav i:hover {
   /* margin-bottom: 20rem; */
 }
 
-.digna {
+.entrada {
   display: inline-block;
   padding-top: 10rem;
   text-align: center;
@@ -73,7 +73,7 @@ nav i:hover {
   cursor: default;
 }
 
-.digna h1 {
+.entrada h1 {
   display: inline-block;
   font-size: 9em;
   padding: 0;
@@ -81,11 +81,11 @@ nav i:hover {
   color: var(--cor1);
 }
 
-.digna span {
+.entrada span {
   display: inline-block;
 }
 
-.digna h2 {
+.entrada h2 {
   display: inline-block;
   font-size: 2.5rem;
   padding: 0;
@@ -98,6 +98,7 @@ nav i:hover {
   font-size: 9em;
   color: var(--cor1);
 }
+
 
 #e2 {
   display: inline-block;
@@ -402,12 +403,12 @@ figure:hover .artes {
 }
 
 @media (max-width: 768px) {
-  .digna h1 {
+  .entrada h1 {
     font-size: 3rem;
 
   }
 
-  .digna h2 {
+  .entrada h2 {
     font-size: 1.2rem;
     margin-left: 0;
   }
@@ -462,11 +463,11 @@ figure:hover .artes {
 }
 
 @media (max-width: 575.98px) {
-  .digna h1 {
+  .entrada h1 {
     font-size: 2.4rem;
   }
 
-  .digna h2 {
+  .entrada h2 {
     font-size: 1.2rem;
     margin-left: 0;
   }
@@ -487,6 +488,11 @@ figure:hover .artes {
 }
 
 .letter {
+  display: inline-block;
+  animation: jump 0.5s ease-in-out alternate;
+}
+
+.entrada h1:hover {
   display: inline-block;
   animation: jump 0.5s ease-in-out alternate;
 }
