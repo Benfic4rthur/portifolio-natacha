@@ -336,7 +336,6 @@ figure:hover .artes {
   animation: balancinho .75s alternate infinite;
 }
 
-
 @keyframes balancinho {
   0% {
     transform: rotate(0);
